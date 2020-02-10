@@ -34,6 +34,87 @@ let lightRed = Color(hue: 10, saturation: 80, brightness: 80, alpha: 75)
 
 // Begin your solution here...
 
+canvas.fillColor = yellow
+canvas.drawShapesWithBorders = false
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
+
+
+for x in stride(from: -135, through: 345, by: 150 + 10){
+    x
+    //SEt color
+    if x == -135 || x == 185 {
+        canvas.borderColor = brown
+        canvas.fillColor = purple
+        
+    }
+    
+    var polygonVertices: [Point] = []
+    polygonVertices.append(Point(x: x, y: 50))
+    polygonVertices.append(Point(x: x + 150, y: 50))
+    polygonVertices.append(Point(x: x + 200, y: 150))
+    polygonVertices.append(Point(x: x + 50, y: 150))
+
+
+    canvas.drawCustomShape(with: polygonVertices)
+
+
+}
+
+for x in stride(from: -135, through: 345, by: 150 + 10){
+    x
+    //Set Color
+    if x == -135 || x == 185 {
+        canvas.borderColor = brown
+        canvas.fillColor = brown
+    } else {
+        canvas.borderColor = purple
+        canvas.fillColor = purple
+    }
+
+    var polygonVertices: [Point] = []
+    polygonVertices.append(Point(x: x, y: 225))
+    polygonVertices.append(Point(x: x + 150, y: 225))
+    polygonVertices.append(Point(x: x + 200, y: 325))
+    polygonVertices.append(Point(x: x + 50, y: 325))
+    
+
+    canvas.drawCustomShape(with: polygonVertices)
+
+}
+
+for x in stride(from: -145, through: 345, by: 150 + 10) {
+    var polygonVertices: [Point] = []
+    canvas.borderColor = lightRed
+    canvas.fillColor = lightRed
+    
+    polygonVertices.append(Point(x: x, y: 140))
+    polygonVertices.append(Point(x: x + 150, y: 140))
+    polygonVertices.append(Point(x: x + 200, y: 240))
+    polygonVertices.append(Point(x: x + 50, y: 240))
+    
+    canvas.drawCustomShape(with: polygonVertices)
+
+    
+}
+
+canvas.drawText(message: "subhumans", at: Point(x: 15, y: 325), size: 50)
+canvas.drawText(message: "friday, april 13 1984", at: Point(x: 10, y: 430), size: 10)
+canvas.drawText(message: "advance $6.50, door $7.50", at: Point(x: 10, y: 415), size: 10)
+canvas.drawText(message: "no age limit", at: Point(x: 10, y: 400), size: 10)
+canvas.drawText(message: "at olympic auditorium", at: Point(x: 150, y: 430), size: 10)
+canvas.drawText(message: "1801 s. grand ave.", at: Point(x: 150, y: 415), size: 10)
+canvas.drawText(message: "los angeles, california", at: Point(x: 150, y: 400), size: 10)
+canvas.drawText(message: "with the tourists", at: Point(x: 280, y: 430), size: 10)
+canvas.drawText(message: "multi death corporations", at: Point(x: 280, y: 415), size: 10)
+canvas.drawText(message: "new regime & red scare", at: Point(x: 280, y: 400), size: 10)
+
+
+
+
+
+
+
+
 //Make a list (array) of vertices
 
 //var polygonVertices: [Point] = [] // empty list of Point objects
@@ -46,15 +127,19 @@ let lightRed = Color(hue: 10, saturation: 80, brightness: 80, alpha: 75)
 //canvas.drawCustomShape(with: polygonVertices)
 
 
-var parallelVertices: [Point] = []
-parallelVertices.append(Point(x: 25, y: 225))
-parallelVertices.append(Point(x: 75, y: 325))
-parallelVertices.append(Point(x: 225, y: 325))
-parallelVertices.append(Point(x: 175, y: 225))
+
+
+//var parallelVertices: [Point] = []
+//parallelVertices.append(Point(x: 25, y: 225))
+//parallelVertices.append(Point(x: 75, y: 325))
+//parallelVertices.append(Point(x: 225, y: 325))
+//parallelVertices.append(Point(x: 175, y: 225))
+
+
 
 
 //Draw the shape
-canvas.drawCustomShape(with: parallelVertices)
+//canvas.drawCustomShape(with: parallelVertices)
 
 
 
